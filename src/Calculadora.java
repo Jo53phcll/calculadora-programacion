@@ -4,7 +4,6 @@ void main() {
 
     while (!opcion.equals("5")) {
 
-
         IO.println("CALCULADORA");
         IO.println("1. Sumar");
         IO.println("2. Restar");
@@ -13,6 +12,7 @@ void main() {
         IO.println("5. Salir");
 
         opcion = IO.readln("Seleccione una opción: ");
+
         switch (opcion) {
 
             case "1": {
@@ -45,5 +45,29 @@ void main() {
                 break;
             }
 
+            case "4": {
+                int num1 = Integer.parseInt(IO.readln("Ingrese el primer número: "));
+                int num2 = Integer.parseInt(IO.readln("Ingrese el segundo número: "));
+
+                if (num2 == 0) {
+                    IO.println("No se puede dividir para cero.");
+                } else {
+                    int resultado = num1 / num2;
+                    IO.println("Resultado: " + resultado);
+                }
+                break;
+            }
+
+            case "5": {
+                IO.println("Gracias por usar la calculadora.");
+                break;
+            }
+
+            default: {
+                IO.println("Opción inválida.");
+            }
         }
+
+        IO.println("");
+    }
 }
