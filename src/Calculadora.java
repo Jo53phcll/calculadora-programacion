@@ -35,5 +35,16 @@ void main() {
                 break;
             }
 
+            case "3": {
+                int num1 = Integer.parseInt(IO.readln("Ingrese el primer número: "));
+                int num2 = Integer.parseInt(IO.readln("Ingrese el segundo número: "));
+
+                int resultado = num1 * num2;
+
+                IO.println("Resultado: " + resultado);
+                break;
+            }
+
+
 
         }
